@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block head %}
+    <title>Legit website</title>
+{% endblock %}
+{% block body %}
+    <h1>Log in</h1>
+    <p>
+        Please log in to download the update.
+    </p>
+    <form method="get" action="{% url 'phished' %}">
+        {# Here we're using hidden inputs with the IDs. As this is a GET #}
+        {# form, they will be automatically put in the URL querystring when #}
+        {# submitted. #}
+        <input type="hidden" name="t" value="{{ request.target_id }}">
+        <input type="hidden" name="p" value="{{ request.pool_id }}">
+        {# We don't put "name" attributes on the username and password #}
+        {# inputs! That way, the browser won't even send them to the server. #}
+        <label>
+            Username:
+            <input>
+        </label>
+        <label>
+            Password:
+            <input type="password">
+        </label>
+        <button type="submit">Log in</button>
+    </form>
+{% endblock %}

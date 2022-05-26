@@ -1,0 +1,19 @@
+<p>
+    Hello sir,
+</p>
+<p>
+    Please download an update now or you'll loose every access you ever had!
+    You can find the update here, on this
+    {# We must put the target and pool IDs in the link's querystring. #}
+    <a href="https://pirate.example.org{% url 'clicked' %}?t={{ target_id }}&p={{ pool_id }}">
+        totally legit website.
+    </a>
+</p>
+<p>
+    Yours sincerely,<br>
+    John
+</p>
+{# Here too. This is an invisible pixel that registers that the email was #}
+{# opened. However, please note that a lot of mail clients won't load it for #}
+{# this very reason. #}
+<img src="https://pirate.example.org{% url 'opened' %}?t={{ target_id }}&p={{ pool_id }}">

@@ -1,0 +1,10 @@
+Hello sir,
+
+Could you log in there, on this totally legit website:
+
+    https://pirate.example.org{% url 'clicked' %}?t={{ target_id }}&p={{ pool_id }}
+
+Please, take your time.
+
+Yours sincerely,
+John

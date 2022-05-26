@@ -1,0 +1,9 @@
+Hello sir,
+
+Please download an update now or you'll loose every access you ever had!
+You can find the update here, on this totally legit website:
+
+    https://pirate.example.org{% url 'clicked' %}?t={{ target_id }}&p={{ pool_id }}
+
+Yours sincerely,
+John
